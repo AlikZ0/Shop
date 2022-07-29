@@ -1,0 +1,396 @@
+* {
+  box-sizing : border-box;
+  margin     : 0;
+  padding    : 0;
+}
+
+.P-admin-section {
+  display     : flex;
+  align-items : flex-start;
+
+}
+
+//.root{
+//  --black: #e7e7e7
+//}
+
+$orange : #f7d1a9;
+$header :  #fbe7d3;
+
+
+.P-sidebar-block {
+  height           : 100vh;
+  width            : 300px;
+  background-color : $orange;
+  padding          : 25px 0;
+  text-align: center;
+
+
+  ul {
+    li {
+
+
+      a {
+        color           : black;
+        font-size       : 20px;
+        text-decoration : none;
+        padding         : 15px 0;
+        transition      : .3s;
+        display         : block;
+        width           : 100%;
+
+        &:hover {
+          background-color : $header;
+          cursor           : pointer;
+        }
+      }
+    }
+  }
+}
+
+header {
+  height           : 100px;
+  width            : 100%;
+  display          : flex;
+  align-items      : center;
+  justify-content  : space-between;
+  background-color : $header;
+  padding          : 10px 25px;
+  text-align: center;
+
+}
+.logout{
+  width: 100px;
+  height: 40px;
+  margin:20px;
+  background-color: white;
+  border:1px solid $orange;
+  border-radius: 30px;
+  font-size: 16px;
+
+  &:hover{
+    color:white;
+    background-color: $orange;
+    border:2px solid  $header;
+
+  }
+}
+
+
+.P-user-header-info {
+  display     : flex;
+  align-items: center;
+  
+
+  .P-profile-image {
+    width            : 60px;
+    height           : 60px;
+    border-radius    : 50%;
+    overflow         : hidden;
+    background-color : #999999;
+    margin-right     : 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+.P-admin-pages {
+  width : calc(100% - 300px);
+}
+
+
+.P-pages {
+  height           : calc(100vh - 100px);
+  background-color : #fffdfd;
+  padding          : 10px;
+}
+
+.P-dashboard {
+  height : 100%;
+  display: flex;
+
+}
+.P-image{
+  margin:20px;
+  width:250px;
+  height: 300px;
+  background-color: #999999;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100px;
+}
+.P-info{
+  margin-left:100px;
+  margin-top:20px;
+    p{
+      font-size: 20px;
+      margin:20px;
+
+    }
+    button{
+      width: 100px;
+      height: 40px;
+      margin:20px;
+      background-color: $header;
+      border:1px solid $orange;
+      border-radius: 30px;
+      font-size: 16px;
+
+      &:hover{
+        color:white;
+        background-color: $orange;
+        border:2px solid  $header;
+
+      }
+    }
+}
+input.P-input {
+  width         : 100%;
+  height        : 40px;
+  padding       : 0 15px;
+  border        : 1px solid #999999;
+  box-shadow    : 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  outline       : none;
+  border-radius : 10px;
+  margin        : 10px 0;
+}
+
+.P-uploaded-image {
+  width               : 60px;
+  height              : 60px;
+  border-radius       : 10px;
+  background-position : center;
+  background-repeat   : no-repeat;
+  background-size     : cover;
+}
+
+.P-gender-form {
+  display    : flex;
+  margin-top : 10px;
+
+  label {
+    display : flex;
+
+    + label {
+      margin-left : 15px;
+    }
+
+    p {
+      margin-left : 15px;
+    }
+  }
+}
+
+.P-manage-form > p {
+  text-align : left;
+}
+
+.P-manage-form + .P-manage-form {
+  margin-top : 15px;
+}
+
+.P-manage-user {
+  display : flex;
+}
+
+.P-manage-user-box {
+  width   : 50%;
+  padding : 0 15px;
+}
+
+.P-save-changes {
+  margin-top       : 25px;
+  height           : 40px;
+  background-color :$header;
+  outline          : none;
+  border           : none;
+  width: 100%;
+}
+.P-button {
+  margin-top       : 25px;
+  height           : 40px;
+  background-color :$header;
+  outline          : none;
+  border           : none;
+  width: 400px;
+}
+
+.product-image{
+  width: 250px;
+  height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after{
+
+    content: '';
+    width: 250px;
+    height:350px ;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 0;
+
+  }
+  span{
+    position: absolute;
+    z-index: 5;
+    font-size: 40px;
+    top:0;
+    right: 0;
+    transform: rotate(135deg);
+    color: #999999;
+    &:hover{
+      display: inline-block;
+      color:black;
+    }
+  }
+}
+.P-box{
+  width: 250px;
+  height: 500px;
+  margin:30px;
+  border-bottom:1px solid #999999bf;
+  
+  
+
+    h2{
+      text-align: center;
+      margin:10px;
+
+    }
+    p{
+      margin :10px;
+      font-size: 18px;
+    }
+    &:hover{
+      border-bottom: 2px solid #6160605c;
+      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+      
+ }
+ }
+.P-dashboard-product{
+  display: flex;
+  flex-wrap: wrap;
+}
+.P-full-dashboard{
+  height: 100%;
+}
+.P-price{
+  display: flex;
+}
+.delete-price{
+  text-decoration: line-through;
+}
+
+.P-full-div{
+  display: flex;
+}
+.settings{
+  width: 400px;
+  border-right: 1px solid rgb(49, 49, 49);
+}
+.changeDiv{
+  margin:30px;
+  text-align: center;
+  width: 700px;
+  height: 500px;
+  border: 2px solid black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inputDiv{
+
+  
+  input{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+
+  }
+  
+}
+.P-file{
+  
+  padding: 10px;
+  display: flex;
+  p{
+    font-size: 18px;
+    margin:10px;
+  }
+  input{
+    margin:10px;
+  }
+}
+.P-save{
+  width: 100px;
+  height: 40px;
+  margin:20px;
+  background-color: $header;
+  border:1px solid $orange;
+  border-radius: 30px;
+  font-size: 16px;
+
+  &:hover{
+    color:white;
+    background-color: $orange;
+    border:2px solid  $header;
+
+  }
+}
+.P-login-image{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $header;
+  label{
+    display:block;
+    margin:30px;
+
+    input{
+      width: 300px;
+      height: 40px;
+      border-radius: 5px;
+      outline: none;
+      background-color:#fbe7d3;
+      color:black;
+      border:none;
+    }
+  }
+  button{
+    width: 100px;
+  height: 40px;
+  margin:20px;
+  background-color: $header;
+  border:1px solid $orange;
+  border-radius: 30px;
+  font-size: 16px;
+
+  &:hover{
+    color:white;
+    background-color: $orange;
+    border:2px solid  $header;
+
+  }
+}
+.section{
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+}
+
